@@ -42,7 +42,7 @@ h3{
   position: absolute;
   top: -23px;
   left: -23px;
-
+  zoom: 80%;
   width: 650px;
   height: 650px;
   flex-shrink: 0;
