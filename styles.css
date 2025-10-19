@@ -8,8 +8,21 @@ body {
   padding-bottom: 5%;
 }
 
+.home{
+  z-index: 1;
+  top: 106px;
+  left: 1420px;
+}
+.bio{
+
+}
+.artwork{
+
+}
+
 h1{
   color: rgb(246, 244, 241);
+
 }
 h2{
   color: rgb(246, 244, 241);
@@ -29,4 +42,142 @@ a{
 
 a:visited{
   color: rgb(246, 244, 241);
+}
+
+#chain{
+  position: absolute;
+  top: -23px;
+  left: -23px;
+
+  width: 650px;
+  height: 650px;
+  flex-shrink: 0;
+}
+
+.nav{
+  z-index: 7;
+  position: absolute;
+  top: 106px;
+  left: 1420px;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+.nav-links {
+  position: absolute;
+  top: 106px;  /* Same as .nav, or adjust to center on the hat */
+  left: 1420px; /* Same as .nav, or adjust to center on the hat */
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+   /* Center the links within the container */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px; /* Space between links */
+ }
+#top{
+  position: absolute;
+  top: 444px;
+  left: 583px;
+  width: 664px;
+  height: 434px;
+  flex-shrink: 0;
+}
+#art{
+  position: absolute;
+  top: 310px;
+  left: 480px;
+  width: 678px;
+  height: 450px;
+  flex-shrink: 0;
+}
+
+#useless{
+  position: absolute;
+  top: 613px;
+  left: 373px;
+  width: 688px;
+  height: 388px;
+}
+
+#performance{
+  position: absolute;
+  top: 490px;
+  left: 862px;
+  width: 688px;
+  height: 388px;
+}
+
+#oof{
+  position: absolute;
+  top: 350px;
+  left: 832px;
+  width: 637px;
+  height: 355px;
+}
+
+
+
+
+#art:hover {
+  transform: translate(-300px, 0); /* moves left */
+}
+
+#useless:hover {
+  transform: translate(-200px, 200px); /* moves down-left */
+}
+
+#performance:hover {
+  transform: translate(350px, 0); /* moves right */
+}
+
+#oof:hover {
+  transform: translate(300px, -250px); /* moves up-right */
+}
+
+/* Grid container - 3 rows, 1 column for the text */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  position: relative;
+  z-index: 5;
+}
+
+.grid-item {
+  color: rgb(246, 244, 241);
+  padding: 10px;
+}
+
+.grid-item h1,
+.grid-item h2,
+.grid-item h3 {
+  margin: 0;
+  color: rgb(246, 244, 241);
+}
+
+.grid-item.title {
+  text-align: center;
+}
+
+.grid-item.subtitle {
+  text-align: center;
+}
+
+.grid-item.description {
+  text-align: center;
+}
+
+.grid-item.description h3 a {
+  color: rgb(246, 244, 241);
+  text-decoration: none;
+}
+
+.grid-item.description h3 a:hover {
+  color: #cfff21;
 }

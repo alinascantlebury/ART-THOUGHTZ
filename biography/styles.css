@@ -12,9 +12,11 @@ body{
 h2{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
+    font-weight: 100;
 }
 
 .container{
-    background-color: rgba(250, 235, 215, 0.49);
+    background-color: rgba(250, 235, 215, 0.639);
 }
+
 
