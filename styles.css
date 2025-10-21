@@ -183,3 +183,16 @@ h3{
   color: rgb(246, 244, 241);
   text-decoration: none;
 }
+
+a:hover {
+  color: #000000;
+  text-shadow: 0 0 10px rgb(234, 255, 4);
+}
+
+a:visited {
+  color: #ffd13b;
+}
+
+a{
+text-decoration: none;
+}
