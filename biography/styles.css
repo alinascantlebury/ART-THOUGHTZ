@@ -23,7 +23,6 @@ body {
     min-height: 100vh;
 }
 
-
 #musson {
     width: 700px;
     max-width: 90%;
@@ -32,13 +31,12 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-
 .right-side {
     width: 50%;
     background-color: rgb(10, 10, 10);
     padding: 250px 80px;
     overflow-y: auto;
-    order: 1;
+    order: 2; /* Changed from 1 to 2 */
 }
 
 .left-side {
@@ -51,7 +49,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 40px;
-    order: 2;
+    order: 1; /* Changed from 2 to 1 */
 }
 
 h1 {
@@ -84,38 +82,27 @@ h2 a:visited {
     color: rgb(200, 0, 200);
 }
 
-.nav{
-    z-index: 7;
+
+
+.nav-links {
+    font-family: 'Times New Roman', Times, serif;
     position: absolute;
-    top: 58px;
-    left: 1660px;
-    height: 200px;
-    flex-shrink: 0;
-    filter:grayscale(70%);
-  
-  }
-  
-  .nav-links {
-    position: absolute;
-    top: 50px;
-    left: 1670px;
+    top: 30px;
+    right: 60px;
     width: 200px;
     height: 200px;
     z-index: 10;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    text-align: right;
     gap: 10px;
     font-size: 30px;
-  
-   }
-
-
-
+}
 
 .nav-links a {
     color: rgb(255, 252, 103);
+    text-decoration: none;
 }
 
 .nav-links a:hover {
@@ -146,5 +133,17 @@ h2 a:visited {
 
     h1 {
         font-size: 50px;
+    }
+
+    .nav {
+        top: 20px;
+        right: 20px;
+        width: 150px;
+    }
+
+    .nav-links {
+        top: 20px;
+        right: 25px;
+        font-size: 30px;
     }
 }
