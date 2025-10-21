@@ -329,3 +329,35 @@ a:visited {
     font-size: 70px;
     text-align: left;
 }
+
+.reveal-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .base-img,
+  .hover-img {
+    width: 450px;
+    height: auto;
+    display: block;
+    transition: opacity 0.4s ease;
+  }
+  
+  /* The hover image sits directly over the base one but is hidden */
+  .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  /* When hovering, the base fades out and the hover image fades in */
+  .reveal-container:hover .base-img {
+    opacity: 0;
+  }
+  
+  .reveal-container:hover .hover-img {
+    opacity: 1;
+  }
+  
+  
