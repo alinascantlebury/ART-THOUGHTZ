@@ -1,78 +1,73 @@
 @font-face {
     font-family: 'hobo';
     src: url('../fonts/hobo/hobo-font.ttf');
-}
-
-* {
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
+  }
+  
+  body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-}
-
-.main {
+  }
+  
+  .main {
     display: flex;
     width: 100%;
     min-height: 100vh;
-}
-
-#musson {
+  }
+  
+  .left-side,
+  .right-side {
+    width: 50%;
+    padding: 40px;
+  }
+  
+  .left-side {
+    background: url(../images/coogi.jpeg) center/cover repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+  }
+  
+  .right-side {
+    background-color: rgb(10, 10, 10);
+    padding: 250px 80px;
+    overflow-y: auto;
+    order: 2;
+  }
+  
+  #musson {
     width: 700px;
     max-width: 90%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.right-side {
-    width: 50%;
-    background-color: rgb(10, 10, 10);
-    padding: 250px 80px;
-    overflow-y: auto;
-    order: 2; /* Changed from 1 to 2 */
-}
-
-.left-side {
-    width: 50%;
-    background-image: url(../images/coogi.jpeg);
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    order: 1; /* Changed from 2 to 1 */
-}
-
-h1 {
+  }
+  
+  h1 {
     color: rgb(255, 252, 103);
     font-family: 'hobo', sans-serif;
     font-size: 75px;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(255, 166, 0, 0.887);
-}
-
-h2 {
+  }
+  
+  h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffb12b;
     font-weight: 300;
     font-size: 20px;
     line-height: 1.8;
     text-align: left;
-}
-
-
-
-
-.nav-links {
+  }
+  
+  .nav-links {
     font-family: 'Times New Roman', Times, serif;
     position: absolute;
     top: 30px;
@@ -82,62 +77,30 @@ h2 {
     z-index: 10;
     display: flex;
     flex-direction: column;
-    justify-content: right;
     text-align: right;
     gap: 10px;
     font-size: 30px;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links a {
     color: rgb(255, 252, 103);
     text-decoration: none;
-}
-
-.nav-links a:hover {
+  }
+  
+  .nav-links a:hover {
     color: #cfff21;
-}
-
-.nav-links a:visited {
+  }
+  
+  .nav-links a:visited {
     color: rgb(0, 255, 64);
-}
-
-@media (max-width: 1024px) {
-    .main {
-        flex-direction: column;
-    }
-
-    .left-side,
-    .right-side {
-        width: 100%;
-    }
-
-    .left-side {
-        min-height: 60vh;
-    }
-
-    .right-side {
-        padding: 40px;
-    }
-
-    h1 {
-        font-size: 50px;
-    }
-
-    .nav {
-        top: 20px;
-        right: 20px;
-        width: 150px;
-    }
-
-    .nav-links {
-        top: 20px;
-        right: 25px;
-        font-size: 30px;
-    }
-}
-
-a:hover {
-    color: #000000;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #000;
     text-shadow: 0 0 10px rgb(234, 255, 4);
   }
   
@@ -145,6 +108,33 @@ a:hover {
     color: #ffd13b;
   }
   
-  a{
-  text-decoration: none;
+  @media (max-width: 1024px) {
+    .main {
+      flex-direction: column;
+    }
+  
+    .left-side,
+    .right-side {
+      width: 100%;
+    }
+  
+    .left-side {
+      min-height: 60vh;
+    }
+  
+    .right-side {
+      padding: 40px;
+    }
+  
+    h1 {
+      font-size: 50px;
+    }
+  
+    .nav-links {
+      top: 20px;
+      right: 25px;
+      width: 150px;
+      font-size: 30px;
+    }
   }
+  

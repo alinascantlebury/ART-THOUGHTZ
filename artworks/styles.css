@@ -1,70 +1,75 @@
 @font-face {
     font-family: 'hobo';
     src: url('../fonts/Inter/inter.ttf');
-}
-
-body {
+  }
+  
+  :root {
+    --highlight: #EAFF00;
+    --accent: #cfff21;
+    --yes: #55ff21;
+    --no: #f50000;
+  }
+  
+  body {
     background-color: black;
-}
-
-.main {
-    position: relative;
-    max-width: 1600px; 
-    min-height: 100vh;
-    margin-top: -40px;
-}
-
-h1 {
-    color: #cfff21;
-    font-family: 'hobo';
-    font-size: 228px;
     text-align: center;
     margin: 0;
-}
-
-h2 {
-    color: #cfff21;
+  }
+  
+  h1, h2, h3 {
     font-family: 'hobo';
+    color: var(--accent);
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 228px;
+  }
+  
+  h2 {
     font-size: 150px;
-    margin: 0;
-}
-
-h3 {
-    color: #cfff21;
-    font-family: 'hobo';
-    font-weight: 150;
+  }
+  
+  h3 {
     font-size: 100px;
-    margin: 0;
-}
-a{
+    font-weight: 150;
+  }
+  
+  a {
     text-decoration: none;
-}
-
-a:hover{
-    text-shadow: 0 0 10px rgb(234, 255, 4);
-
-}
-
-
-a:visited {
-    color: #cfff21;
-}
-
-.flower img {
+  }
+  
+  a:hover {
+    text-shadow: 0 0 10px var(--highlight);
+  }
+  
+  a:visited {
+    color: var(--accent);
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .main {
+    position: relative;
+    max-width: 1600px;
+    min-height: 100vh;
+    margin-top: -40px;
+  }
+  
+  .flower img {
     width: 1000px;
     max-width: 90%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-.nav-links {
+  }
+  
+  .nav-links {
     font-family: 'Times New Roman', Times, serif;
     position: absolute;
     top: 70px;
-
     right: 60px;
     width: 200px;
     height: 200px;
@@ -75,63 +80,56 @@ a:visited {
     text-align: right;
     gap: 10px;
     font-size: 30px;
-}
+  }
   
-.nav-links a {
+  .nav-links a {
     color: rgb(255, 252, 103);
-    text-decoration: none;
-}
-
-.nav-links a:hover {
-    color: #cfff21;
-}
-
-.nav-links a:visited {
+  }
+  
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+  
+  .nav-links a:visited {
     color: rgb(0, 255, 64);
-}
-
-#arrow-1 {
+  }
+  
+  #arrow-1, #arrow-2, #arrow-3, #arrow-4 {
     position: absolute;
+    width: 300px;
+    height: auto;
+  }
+  
+  #arrow-1 {
     top: 209px;
     left: 450px;
-    width: 300px;
-    height: auto;
-}
-
-#arrow-2 {
-    position: absolute;
+  }
+  
+  #arrow-2 {
     top: 438px;
     left: 450px;
-    width: 300px;
-    height: auto;
-}
-#arrow-3 {
-    position: absolute;
+  }
+  
+  #arrow-3 {
     top: 438px;
     left: 5px;
-    width: 300px;
-    height: auto;
-}
-
-#arrow-4 {
-    position: absolute;
+  }
+  
+  #arrow-4 {
     top: 438px;
     right: 5px;
-    width: 300px;
-    height: auto;
     transform: scaleX(-1);
-
-}
-
-#world {
+  }
+  
+  #world {
     position: absolute;
     top: 100px;
     left: 750px;
     width: 700px;
     height: auto;
-}
-
-.enter {
+  }
+  
+  .enter {
     position: absolute;
     top: 250px;
     left: 50px;
@@ -139,211 +137,164 @@ a:visited {
     flex-direction: column;
     gap: 0;
     z-index: 5;
-}
-
-.enter h2 {
-    color: #EAFF00;
+  }
+  
+  .enter h2 {
+    color: var(--highlight);
     font-family: 'hobo', Inter, sans-serif;
     font-size: 128px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1;
-    margin: 0;
     text-align: left;
-}
-
-.break {
+  }
+  
+  .break {
     margin-bottom: 500px;
-}
-
-#next {
+  }
+  
+  #next {
     text-align: center;
-}
-
-#yes {
-    color: #55ff21 !important;
+  }
+  
+  #yes {
+    color: var(--yes) !important;
     text-align: center;
-}
-
-#no {
-    color: #f50000 !important;
+  }
+  
+  #no {
+    color: var(--no) !important;
     text-align: center;
-}
-
-#yes-ex{
-    color: #55ff21 !important;
+  }
+  
+  #yes-ex {
+    color: var(--yes) !important;
     text-align: left;
-}
-
-#not-ex{
-    color: #f50000 !important;
+  }
+  
+  #not-ex {
+    color: var(--no) !important;
     text-align: right;
-}
-.examples{
+  }
+  
+  .examples {
     text-align: center;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1400px) {
-    #world {
-        left: 600px;
-        width: 600px;
-    }
-    
-    #arrow-1,
-    #arrow-2 {
-        left: 350px;
-    }
-}
-
-.container {
+  }
+  
+  .container {
     max-width: 100%;
     margin-top: 40px;
-}
-
-.header {
+  }
+  
+  .header {
     text-align: center;
     margin-bottom: 40px;
-}
-
-.header h1 {
+  }
+  
+  .header h1 {
     font-size: 120px;
     font-weight: bold;
-    color: #EAFF00;
+    color: var(--highlight);
     margin-bottom: 20px;
-}
-
-.content {
+  }
+  
+  .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
-    margin-bottom: 80px;
-    margin-top: 50px;
-}
-.ex-content {
+    margin: 50px 0 80px;
+  }
+  
+  .ex-content {
     display: grid;
     grid-template-columns: 20% 1fr 20%;
     gap: 100px;
-    margin-bottom: 80px;
-    margin-top: 100px;
-}
-.yes-section, .no-section {
+    margin: 100px 0 80px;
+  }
+  
+  .yes-section, .no-section {
     text-align: center;
-}
-
-.yes-section h2 {
+  }
+  
+  .yes-section h2 {
     font-size: 150px;
-    color: #55ff21;
+    color: var(--yes);
     font-weight: bold;
     margin-bottom: 40px;
-}
-
-.no-section h2 {
+  }
+  
+  .no-section h2 {
     font-size: 150px;
-    color: #f50000;
+    color: var(--no);
     font-weight: bold;
     margin-bottom: 40px;
-}
-
-.subtitle {
+  }
+  
+  .subtitle {
     font-size: 32px;
-    color: #EAFF00;
+    color: var(--highlight);
     margin-bottom: 30px;
     line-height: 1.4;
-}
-
-.description {
+  }
+  
+  .description {
     font-size: 28px;
-    color: #EAFF00;
+    color: var(--highlight);
     line-height: 1.6;
-    text-align: center;
-}
-
-.proposition {
+  }
+  
+  .proposition {
     text-align: center;
     margin-top: 30px;
     padding: 40px;
-}
-
-.proposition h3 {
+  }
+  
+  .proposition h3 {
     font-size: 80px;
-    color: #EAFF00;
+    color: var(--highlight);
     margin-bottom: 30px;
-}
-
-.proposition p {
+  }
+  
+  .proposition p {
     font-size: 28px;
-    color: #EAFF00;
+    color: var(--highlight);
     line-height: 1.8;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-@media (max-width: 1200px) {
-    .content {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-
-    .header h1 {
-        font-size: 80px;
-    }
-
-    .yes-section h2,
-    .no-section h2 {
-        font-size: 100px;
-    }
-
-    .subtitle {
-        font-size: 24px;
-    }
-
-    .description {
-        font-size: 20px;
-    }
-
-    .proposition h3 {
-        font-size: 50px;
-    }
-
-    .proposition p {
-        font-size: 20px;
-    }
-}
-.part-2{
+  }
+  
+  .part-2 {
     padding-top: 30px;
     font-size: 100px;
     text-align: center;
-}
-
-.ex-container{
+  }
+  
+  .ex-container {
     display: grid;
     grid-template-columns: 20% 1fr 20%;
     grid-template-rows: 20% 1fr 20%;
-}
-
-.decision-head{
+  }
+  
+  .decision-head {
     font-size: 100px;
-}
-#more{
+  }
+  
+  #more {
     font-size: 70px;
     text-align: left;
-}
-
-.reveal-container {
+  }
+  
+  .reveal-container {
     position: relative;
     display: inline-block;
   }
   
-  .base-img,
-  .hover-img {
+  .base-img, .hover-img {
     width: 450px;
     height: auto;
     display: block;
     transition: opacity 0.4s ease;
   }
   
-  /* The hover image sits directly over the base one but is hidden */
   .hover-img {
     position: absolute;
     top: 0;
@@ -351,7 +302,6 @@ a:visited {
     opacity: 0;
   }
   
-  /* When hovering, the base fades out and the hover image fades in */
   .reveal-container:hover .base-img {
     opacity: 0;
   }
@@ -360,4 +310,45 @@ a:visited {
     opacity: 1;
   }
   
+  @media (max-width: 1400px) {
+    #world {
+      left: 600px;
+      width: 600px;
+    }
+  
+    #arrow-1, #arrow-2 {
+      left: 350px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .content {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  
+    .header h1 {
+      font-size: 80px;
+    }
+  
+    .yes-section h2, .no-section h2 {
+      font-size: 100px;
+    }
+  
+    .subtitle {
+      font-size: 24px;
+    }
+  
+    .description {
+      font-size: 20px;
+    }
+  
+    .proposition h3 {
+      font-size: 50px;
+    }
+  
+    .proposition p {
+      font-size: 20px;
+    }
+  }
   
